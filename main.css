@@ -1,0 +1,69 @@
+:root {
+	--banner-height: calc(min(120px, 20vw, 20vh));
+	--banner-text: calc(min(30px, 5vw, 5vh));
+	--description-gap: 5px;
+	--narrow-gap: 10px;
+	--wide-gap: 20px;
+	--tile-min: 200px;
+	--tile-max: 300px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-overflow: ellipsis;
+}
+
+div {
+	overflow: hidden;
+}
+
+.topBanner {
+	width: 100vw;
+	height: var(--banner-height);
+	font-size: var(--banner-text);
+	line-height: var(--banner-height);
+	text-align: center;
+	background-position: center;
+	background-size: cover;
+}
+
+.tileMain {
+	display: flex;
+	flex-direction: column;
+	gap: var(--narrow-gap);
+	padding: var(--wide-gap);
+	text-align: center;
+}
+
+.tileHeader {
+	padding-top: var(--narrow-gap);
+}
+
+.tileRow {
+	display: flex;
+	justify-content: space-around;
+	gap: var(--wide-gap);
+}
+
+.tileRow a {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	justify-items: flex-end;
+	flex: 1;
+	min-width: var(--tile-min);
+	max-width: var(--tile-max);
+	aspect-ratio: 1.5;
+	text-align: center;
+	background-position: center;
+	background-size: cover;
+}
+
+.tileRow div {
+	display: flex;
+	flex-direction: column;
+	gap: var(--description-gap);
+	padding: var(--narrow-gap);
+}
